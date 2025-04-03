@@ -1,0 +1,254 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to bottom right, #f8f9fa, #e0f7fa);
+  color: #111;
+  overflow-x: hidden;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #00bcd4, #8e24aa);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.subpara {
+  font-size: 1.1rem;
+  max-width: 100%;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.start-button {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  background-color: #00bcd4;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.start-button:hover {
+  background-color: #008ba3;
+}
+
+.call {
+  background-color: #ffffff;
+  color: #00bcd4;
+  border: 2px solid #00bcd4;
+}
+
+.call:hover {
+  background-color: #e0f7fa;
+}
+
+.background-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(ellipse at 20% 20%, rgba(0, 188, 212, 0.1), transparent),
+              radial-gradient(ellipse at 80% 30%, rgba(142, 36, 170, 0.1), transparent),
+              radial-gradient(ellipse at 50% 80%, rgba(0, 188, 212, 0.1), transparent);
+  animation: shimmer 12s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 20% 20%, 80% 30%, 50% 80%;
+  }
+  50% {
+    background-position: 25% 25%, 75% 35%, 55% 75%;
+  }
+  100% {
+    background-position: 20% 20%, 80% 30%, 50% 80%;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .subpara {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.page-section {
+  padding: 3rem 1.5rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s;
+}
+
+.content-section:hover {
+  transform: translateY(-5px);
+}
+
+.content-section h3 {
+  color: #007b9e;
+  margin-bottom: 1rem;
+}
+
+.alt-bg {
+  background: #e0f7fa;
+}
+
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+}
+
+ol, ul {
+  padding-left: 1rem;
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+.nav-footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  margin: 2rem auto;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0, 188, 212, 0.1);
+}
+
+.illustration {
+  display: block;
+  margin: 2rem auto;
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.yt-embed {
+  border-radius: 10px;
+  margin-top: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.mini-image {
+  margin-top: 2rem;
+  width: 250px;
+  opacity: 0.8;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 12px;
+  margin: 2rem auto;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0, 188, 212, 0.1);
+}
+.navbar {
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 0.75rem 2rem;
+  background: rgba(245, 245, 245, 0.534);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+  position: relative; /* no longer sticky */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #00bcd4;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+  background: #00bbd418;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
