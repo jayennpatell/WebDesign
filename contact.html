@@ -23,7 +23,7 @@
     <h1>Contact Us</h1>
     <p>We'd love to hear from you! Whether it's a question, suggestion, or you just want to say hi — feel free to reach out.</p>
     
-    <form action="#" method="POST" class="contact-form">
+    <form action="#" method="POST" class="contact-form" id="contactForm">
       <label for="name">Your Name</label>
       <input type="text" id="name" name="name" required />
 
@@ -40,5 +40,18 @@
   <footer class="footer">
     <p>&copy; 2025 Your Mind Matters. All rights reserved.</p>
   </footer>
+
+  <script>
+    // When the form is submitted, replace the page content with only a thank you message and a "Return Home" button
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.body.innerHTML =
+        '<div style="display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh;">' +
+          '<h1>Thank you!</h1>' +
+          '<p>Your message has been sent successfully.</p>' +
+          '<a href="home.html" class="start-button" style="margin-top:1rem;">Return Home</a>' +
+        '</div>';
+    });
+  </script>
 </body>
 </html>
